@@ -59,9 +59,9 @@ public final class Configs {
 	private static String heartbeatDelay ="";
 	private static Log LOG = LogFactory.getLog(Configs.class);
 	
-	private static void loadProp(String folderPath,boolean isClear){
+	private static void loadProp(String folderPath,boolean isReload){
 		try{
-			if(isClear)propMap.clear();
+			if(isReload)propMap.clear();
 			String folderRealPath = Configs.class.getClassLoader().getResource(folderPath).getPath();
 			File folder = new File(folderRealPath);
 			File[] files = folder.listFiles();
